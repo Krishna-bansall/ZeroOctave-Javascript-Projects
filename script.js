@@ -1,4 +1,8 @@
 const nav = document.querySelector(".nav");
+const md = document.getElementById("md-text");
+md.innerHTML = marked.parse(
+	"# Marked in the browser\n\nRendered by **marked**."
+);
 
 let projects = [];
 const experi = document.getElementById("cardd");

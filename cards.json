@@ -2,7 +2,8 @@
     {
         "name": "2048 Game",
         "image": "assets/Images/2048.png",
-        "link": "Public/2048.html"
+        "link": "Public/2048.html",
+        "docs": "assets/docs/starter-guide.md"
     },
     {
         "name": "Accordion",
