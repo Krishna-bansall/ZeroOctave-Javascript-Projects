@@ -1,8 +1,4 @@
 const nav = document.querySelector(".nav");
-const md = document.getElementById("md-text");
-md.innerHTML = marked.parse(
-	"# Marked in the browser\n\nRendered by **marked**."
-);
 
 let projects = [];
 const experi = document.getElementById("cardd");
@@ -45,4 +41,15 @@ const displayProjects = (projects) => {
 	experi.innerHTML = htmlString;
 };
 
+// var converter = new showdown.Converter();
+
+const fetchData = fetch("assets/docs/starter-guide.md")
+	.then((response) => response.text())
+	.then((data) => {
+		console.log(marked.parse(data));
+		return data;
+	});
+
 getProject();
+const quan = fetchData();
+console.log(quan);

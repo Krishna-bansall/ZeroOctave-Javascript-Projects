@@ -577,6 +577,20 @@ button {
 .modal-column {
   min-height: 70vh;
 }
+/* .modal-column h1,h2,h3,p,li,ul {
+background-color: white;
+color: black;
+font-family: 'Poppins', 'sans-serif';
+}
+.modal-column h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: black;
+} .modal-column p {
+  font-size: 1rem;
+  color: #101522;
+} */
+
 .modal-img {
   display: flex;
   justify-content: center;
