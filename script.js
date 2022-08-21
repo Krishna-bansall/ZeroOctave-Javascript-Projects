@@ -21,9 +21,39 @@ const getProject = fetch("cards.json")
 		displayProjects(projects);
 		console.log(projects);
 	});
-const handleChange = (id) => {
-	console.log("clicked", id);
+
+const fetchMarkdown = async (url) => {
+	const fetchData = fetch(url)
+		.then((response) => response.text())
+		.then((data) => {
+			return data;
+		});
+	return fetchData;
 };
+
+const handleChange = async (id) => {
+	const modal = document.getElementById("exampleModal");
+	console.log("clicked", id);
+	const project = projects[id];
+
+	const heading = document.getElementById("modal-title");
+	heading.innerText = project.name;
+
+	const img = document.getElementById("img-div");
+	img.innerHTML = `
+				<div class="bg-img-div">
+					<img class="" src=${project.image} alt="" />
+				</div>
+				<div>
+					<img src=${project.image} alt="" />
+				</div>
+			</div>
+	`;
+
+	const md = document.getElementById("md-text");
+	md.innerHTML = await fetchMarkdown(project.url);
+};
+
 const displayProjects = (projects) => {
 	const htmlString = projects.map((project, id) => {
 		return `<div class="stylebox">
@@ -32,7 +62,14 @@ const displayProjects = (projects) => {
            <img src="${project.image}" alt="">
         </div>
         <div class="card-data">
-           <button id="btnn" onclick={handleChange(${id})} class="btnn">Check Out!</button>
+           <button id="btnn"
+		    onclick={handleChange(${id})}
+			class="btnn"
+			data-toggle="modal"
+			data-target="#exampleModal"
+			 >
+			 Check Out!
+			 </button>
         </div>
  
     </div>`;
@@ -43,13 +80,4 @@ const displayProjects = (projects) => {
 
 // var converter = new showdown.Converter();
 
-const fetchData = fetch("assets/docs/starter-guide.md")
-	.then((response) => response.text())
-	.then((data) => {
-		console.log(marked.parse(data));
-		return data;
-	});
-
 getProject();
-const quan = fetchData();
-console.log(quan);
