@@ -577,19 +577,24 @@ button {
 .modal-column {
   min-height: 70vh;
 }
-/* .modal-column h1,h2,h3,p,li,ul {
-background-color: white;
-color: black;
-font-family: 'Poppins', 'sans-serif';
+
+#md-text h1,h2,h3,p,li,ul {
+  text-align: left;
+  background-color: white;
+  color: black;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Poppins', 'sans-serif';
 }
-.modal-column h1 {
+#md-text h1 {
   font-size: 2rem;
   font-weight: 400;
-  color: black;
-} .modal-column p {
+  color: greenyellow;
+} #md-text p {
+  color: greenyellow;
   font-size: 1rem;
   color: #101522;
-} */
+}
 
 .modal-img {
   display: flex;

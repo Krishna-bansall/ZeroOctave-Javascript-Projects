@@ -51,7 +51,11 @@ const handleChange = async (id) => {
 	`;
 
 	const md = document.getElementById("md-text");
-	md.innerHTML = await fetchMarkdown(project.url);
+	var converter = new showdown.Converter();
+	const markdown = await fetchMarkdown(
+		"http://127.0.0.1:5500/assets/docs/getting-started.md"
+	);
+	md.innerHTML = converter.makeHtml(markdown);
 };
 
 const displayProjects = (projects) => {
