@@ -149,7 +149,7 @@
     },
     {
 	      "name":"Color Game",
-	      "image": "assets/Images/color-game.PNG" ,
+	      "image": "assets/Images/color-game.png" ,
 	      "link":"Public/color-game.html"
     },
     {
@@ -628,6 +628,11 @@
         "link": "Public/Simon_game.html"
     },
     {
+        "name": "SimplyRecipes",
+        "image": "assets/Images/SimplyRecipes/assets/main.jpeg",
+        "link" : "Public/SimplyRecipes"
+    },
+    {
         "name": "Snake",
         "image": "assets/Images/snake.JPG",
         "link": "Public/snake.html"
@@ -636,6 +641,11 @@
         "name": "Sneakers",
         "image": "assets/Images/sneaker-images/air2.png",
         "link": "Public/sneaker.html"
+    },
+    {
+        "name": "Social Tray",
+        "image": "assets/Images/socialTray.png",
+        "link": "Public/socialTray.html"
     },
     {
         "name": "Socials",
